@@ -39,6 +39,8 @@ def IsRight(a, b, p):
     else:
         return False
 
+### Next three functions are implemented to sort points in dictionary order
+
 def swap_points(points, j, i):
     aux_x = points[i][0]
     aux_y = points[i][1]
@@ -57,16 +59,15 @@ def Partition_x(points, p, r):
     swap_points(points, i+1, r)
     return i + 1
             
-
 def QuickSort_x(points, p, r):
     if p < r:
         q = Partition_x(points, p, r)
         QuickSort_x(points, p, q-1)
         QuickSort_x(points, q+1, r)
 
-################ Funcienes agragadas para la tarea 2
+################ Functions added for Art Gallery problem
 
-
+#Returns True if the point p is inside the triangle T, it returns False otherwise
 def IsInsideTriangle(T, p):
     b = IsRight(T[0], T[1], p) 
     if  IsRight(T[1], T[2], p) == b and IsRight(T[2], T[0], p) == b:
@@ -75,6 +76,7 @@ def IsInsideTriangle(T, p):
         return False
 
 
+# Returns True if triangles T1 and T2 share an edge, otherwise it returns False
 def AreAdjacentTriangles(T1, T2):
     equal_vertex = 0
     for j in range(3):
@@ -88,12 +90,13 @@ def AreAdjacentTriangles(T1, T2):
         return False
 
 
+# Returns the centroid of the triangle T
 def Gravicentro(T):
     return [ (T[0][0] + T[1][0] + T[2][0])/3 , (T[0][1] + T[1][1] + T[2][1])/3]
 
 
-
-def IsThePoint_a_vertex_of_triange(T, p):
+#Returns True if the point p is a vertex of the triangle T, else it returns False
+def IsThePoint_a_vertex_of_triange(T, p): 
     if T[0][0] == p[0] and T[0][1] == p[1]:
         return True
     if T[1][0] == p[0] and T[1][1] == p[1]:

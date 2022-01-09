@@ -1,11 +1,12 @@
 from manim import *
-import geo_funcs as gf
+import geometry_functions as gf
 config.frame_width = 50
 
 
 def QuickHalfHull(a, b, points, self):
     n = len(points)
-    if n == 0:
+
+    if n == 0:  #base case of recursion
         self.play(Create(Line([a[0], a[1],0],[b[0],b[1],0])),run_time=0.7)
         return [b]
     

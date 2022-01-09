@@ -1,5 +1,5 @@
 from manim import *
-import geo_funcs as gf
+import geometry_functions as gf
 config.frame_width = 25
 
 
