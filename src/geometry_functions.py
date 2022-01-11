@@ -101,7 +101,7 @@ def AreAdjacentTriangles(T1, T2):
         return False
 
 
-# Returns the centroid of the triangle T
+# Returns centroid of triangle T
 def Gravicentro(T):
     return [ (T[0][0] + T[1][0] + T[2][0])/3 , (T[0][1] + T[1][1] + T[2][1])/3]
 
