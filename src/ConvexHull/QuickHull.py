@@ -1,10 +1,8 @@
 from manim import *
 
 import sys
-# insert at 1, 0 is the script path (or '' in REPL)
 sys.path.append('../')
 import geometry_functions as gf
-
 
 config.frame_width = 50
 
@@ -49,10 +47,12 @@ def QuickHalfHull(a, b, points, self):
 class QuickHull(Scene): 
     def construct(self):
 
-        # INPUT 
+        ##########################         INPUT         ###############################
         points = [[0.5, 2], [1.5, 4], [5, 6], [10, 11], [-2, 11], [-20, 6], [10, -10], [15, -8], [-4, 6], [-7, -8], [-10, -10], [-1, -2], [0, 1], [4, 9], [1, 3], [-6, 8], [12, 0], [12,9], [-9, 6], [-10, 8], [15, 9], [-1, 0], [0, 0], [8, 8], [3, 1], [1, 1]]
-        #[[-20, 6], [-2, 11], [10, 11], [15, 9], [15, -8], [10, -10], [-10, -10]] 
+        #poitns = [[-20, 6], [-2, 11], [10, 11], [15, 9], [15, -8], [10, -10], [-10, -10]] 
         
+        ################################################################################
+
         #Find Horizontal extrema where a is the left point and b the right one
         a = points[0] 
         b = points[0]

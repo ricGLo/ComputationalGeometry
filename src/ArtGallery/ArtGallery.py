@@ -1,6 +1,8 @@
 from manim import *
+import sys
+sys.path.append('../')
 import geometry_functions as gf
-config.frame_width = 25
+
 
 
 def Is_a_tip(Polygon, j):

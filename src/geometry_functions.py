@@ -1,5 +1,9 @@
 import numpy as np
 
+
+# numpy can be used instead some of these functions
+
+
 def InnerProduct(a, b):
     s = 0
     for j in range(len(a)):
@@ -9,37 +13,44 @@ def InnerProduct(a, b):
 def norm(x):
     return np.sqrt(InnerProduct(x, x))
 
-def rest_vec(a, b):
+# vector rest
+def rest_vec(a, b): 
     return [a[0]-b[0], a[1]-b[1]]
 
+#Euclidean distance
 def distanceBetweenPoints(a, b):
     return norm(rest_vec(a, b))
+
 
 def determinant(a, b):
     return a[0]*b[1]-a[1]*b[0]
 
+# 3pi rotation
 def rotate_270(x):
     return [x[1], -x[0]]
 
 
+# Distance from a point to a line 
 def distanceToLine(a, b, p):
     r = rest_vec(b, a)
     return np.abs(InnerProduct(rotate_270(r), rest_vec(p, a)))/norm(r)
 
 
+#Returns True if point p is to the left of directed segment ab, in other case it returns False
 def IsLeft(a, b, p):
     if determinant(rest_vec(b, a), rest_vec(p, a)) > 0:
         return True
     else:
         return False
 
+#Returns True if point p is to the right of directed segment ab, in other case it returns False
 def IsRight(a, b, p):
     if determinant(rest_vec(b, a), rest_vec(p, a)) < 0:
         return True
     else:
         return False
 
-### Next three functions are implemented to sort points in dictionary order
+### Next three functions are implemented to sort points in dictionary order using Quick sort algorithm
 
 def swap_points(points, j, i):
     aux_x = points[i][0]
