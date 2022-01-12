@@ -21,6 +21,8 @@ in same folder. You can use -pql instead of -p to create low quality video.
 
 It was solved using Ear Clipping algorithm to triangulate a polygon. Then, dual graph of triangulation is constructed. After that, dual graph is explored using [DFS](https://en.wikipedia.org/wiki/Depth-first_search) coloring vertices of blue, green and red. Finally algorithm checks which color is the least used to obtain the OUTPUT. 
 
+INPUT: An array of two dimentional arrays (a n x 2 matrix) containging the points of a polygon. **Polygon points must be given in clokwise direction.**
+
 Art Gallery animation requires a [LaTex](https://www.latex-project.org/) distribution. For example: [MiKTeX](https://miktex.org/) or [TeX Live](https://www.tug.org/texlive/). 
 
 To create animation run 
