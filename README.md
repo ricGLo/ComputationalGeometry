@@ -1,7 +1,7 @@
 # Computational Geometry
 
 
-This repository contains implementations to solve the next Computational Geometry problems. Implemented algorithms use a [module](src/geometry_functions.py) that contains geometry functions. This module requires [numpy](https://numpy.org/) in order to work. Each algorithm is animated using [manim](https://www.manim.community/), its instalation is neccesary. [Manim](https://www.manim.community/) is a community maintained [Python](https://www.python.org/) library for creating mathematical animations. This is the reason all implementations are in [Python](https://www.python.org/). [ConvexHull](src/ConvexHull) and [ArtGallery](src/ArtGallery) folders contain a media folder where animation videos are found. However, animations are also found in [this YouTube playlist](https://youtube.com/playlist?list=PL0Tt1mQwusqRMgzO8DjtxT12ajNNG3YQu).
+This repository contains implementations to solve the next Computational Geometry problems. Implemented algorithms use a [module](src/geometry_functions.py) that contains geometry functions. This module requires [numpy](https://numpy.org/) in order to work. Each algorithm is animated using [manim](https://www.manim.community/), its instalation is neccesary. [Manim](https://www.manim.community/) is a community maintained [Python](https://www.python.org/) library for creating mathematical animations. This is the reason all implementations are in [Python](https://www.python.org/). Each [ConvexHull](src/ConvexHull) and [ArtGallery](src/ArtGallery) folders contain a media folder where animation videos are found. However, this videos are also found in [this YouTube playlist](https://youtube.com/playlist?list=PL0Tt1mQwusqRMgzO8DjtxT12ajNNG3YQu).
 
 ## Convex Hull
 
