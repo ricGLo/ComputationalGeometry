@@ -3,15 +3,8 @@ import numpy as np
 
 # numpy can be used instead some of these functions
 
-
-def InnerProduct(a, b):
-    s = 0
-    for j in range(len(a)):
-        s += a[j]*b[j]
-    return s
-
 def norm(x):
-    return np.sqrt(InnerProduct(x, x))
+    return np.sqrt(np.dot(x, x))
 
 # vector rest
 def rest_vec(a, b): 
@@ -25,7 +18,7 @@ def distanceBetweenPoints(a, b):
 def determinant(a, b):
     return a[0]*b[1]-a[1]*b[0]
 
-# 3pi rotation
+# Get ortoghonal vector
 def rotate_270(x):
     return [x[1], -x[0]]
 
@@ -33,7 +26,7 @@ def rotate_270(x):
 # Distance from a point to a line 
 def distanceToLine(a, b, p):
     r = rest_vec(b, a)
-    return np.abs(InnerProduct(rotate_270(r), rest_vec(p, a)))/norm(r)
+    return np.abs(np.dot(rotate_270(r), rest_vec(p, a)))/norm(r)
 
 
 #Returns True if point p is to the left of directed segment ab, in other case it returns False
