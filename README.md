@@ -5,7 +5,9 @@ This repository contains implementations to solve the next Computational Geometr
 
 ## Convex Hull
 
-Both Quick Hull and Graham Scan algorithms were implemented. Graham scan implementation requires no points repeted in given INPUT. 
+Both Quick Hull and Graham Scan algorithms were implemented.
+
+INPUT: An array of two dimentional arrays (a n x 2 matrix). Graham scan implementation requires no points repeted in given INPUT. 
 
 To create Quick Hull animation you must run in terminal
 ~~~
