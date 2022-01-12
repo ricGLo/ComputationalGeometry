@@ -1,7 +1,7 @@
 # Computational Geometry
 
 
-This repository contains implementations to solve the next Computational Geometry problems. Implemented algorithms use a [module](src/geometry_functions.py) that contains geometry functions. This module requires [numpy](https://numpy.org/) in order to work. Each algorithm is animated using [manim](https://www.manim.community/), its instalation is neccesary. [Manim](https://www.manim.community/) is a community maintained [Python](https://www.python.org/) library for creating mathematical animations. It's why all implementations are in [Python](https://www.python.org/). [ConvexHull](src/ConvexHull) and [ArtGallery](src/ArtGallery) folders contain a media folder where animation videos are found. However, resulting videos are also found in [this YouTube playlist](https://youtube.com/playlist?list=PL0Tt1mQwusqRMgzO8DjtxT12ajNNG3YQu).
+This repository contains implementations to solve the next Computational Geometry problems. Implemented algorithms use a [module](src/geometry_functions.py) that contains geometry functions. This module requires [numpy](https://numpy.org/) in order to work. Each algorithm is animated using [manim](https://www.manim.community/), its instalation is neccesary. [Manim](https://www.manim.community/) is a community maintained [Python](https://www.python.org/) library for creating mathematical animations. This is the reason all implementations are in [Python](https://www.python.org/). [ConvexHull](src/ConvexHull) and [ArtGallery](src/ArtGallery) folders contain a media folder where animation videos are found. However, animations are also found in [this YouTube playlist](https://youtube.com/playlist?list=PL0Tt1mQwusqRMgzO8DjtxT12ajNNG3YQu).
 
 ## Convex Hull
 
@@ -19,11 +19,11 @@ in same folder. You can use -pql instead of -p to create low quality video.
 
 ## Art Gallery problem
 
-It was solved using Ear Clipping algorithm to triangulate a polygon. Then, dual graph of triangulation is constructed. After that dual graph is explored coloring vertices of blue, green and red. Finally algotihm checks wich color is the least used to obtain the OUTPUT. 
+It was solved using Ear Clipping algorithm to triangulate a polygon. Then, dual graph of triangulation is constructed. After that, dual graph is explored using [DFS](https://en.wikipedia.org/wiki/Depth-first_search) coloring vertices of blue, green and red. Finally algorithm checks which color is the least used to obtain the OUTPUT. 
 
 Art Gallery animation requires a [LaTex](https://www.latex-project.org/) distribution. For example: [MiKTeX](https://miktex.org/) or [TeX Live](https://www.tug.org/texlive/). 
 
-To crate animation run 
+To create animation run 
 ~~~
 manim -p ArtGallery.py ArtGallery  
 ~~~
